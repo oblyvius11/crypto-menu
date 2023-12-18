@@ -10,9 +10,6 @@
 #include <iomanip>
 using namespace std;
 
-#ifndef CANYOUHACKUS_TOKEN_H
-#define CANYOUHACKUS_TOKEN_H
-
 class token {
 private:
     int size, capacity;
