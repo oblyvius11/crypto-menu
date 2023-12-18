@@ -14,7 +14,7 @@ Table of Contents:
 
 
 
-Code Structure
+Code Structure: 
 The code is organized as follows:
 
 token.h: Definition of the token class, which represents a cryptographic token and 
@@ -31,7 +31,7 @@ Below is a brief overview of the functions and classes in the token.h file. If y
 specifics, I have tried my best to leave comments throughout the code where I thought
 it was necessary to help readability.
 
-// Class representing a token
+Class representing a token
 class token {
 private:
     int size, capacity;
@@ -39,155 +39,155 @@ private:
     double score;
 
 public:
-    // Default constructor
+    Default constructor
     token();
 
-    // Constructor with specified capacity
+    Constructor with specified capacity
     token(int capacity);
 
-    // Copy constructor
+    Copy constructor
     token(const token& other);
 
-    // Assignment operator
+    Assignment operator
     token& operator=(const token& other);
 
-    // Destructor
+    Destructor
     ~token();
 
-    // Appends a character to the token
+    Appends a character to the token
     void pushback(char ch);
 
-    // Overloaded + operator to concatenate a string to the token
+    Overloaded + operator to concatenate a string to the token
     token& operator+(string str);
 
-    // Overloaded = operator to assign a string to the token
+    Overloaded = operator to assign a string to the token
     token& operator=(const string& str);
 
-    // Calculates the token's score based on letter frequency
+    Calculates the token's score based on letter frequency
     double calculateScore();
 
-    // Prints the token's data
+    Prints the token's data
     void printData() const;
 
-    // Prints the token's data in reverse order
+    Prints the token's data in reverse order
     void printDataRev() const;
 
-    // Prints only alphabetic characters from the token's data
+    Prints only alphabetic characters from the token's data
     void printAlpha() const;
 
-    // Prints only numeric characters from the token's data
+    Prints only numeric characters from the token's data
     void printNum() const;
 
-    // Prints the token's score
+    Prints the token's score
     void printScore() const;
 
-    // Prints details (size and capacity) of the token
+    Prints details (size and capacity) of the token
     void printDetails() const;
 
-    // Gets a character at the specified index
+    Gets a character at the specified index
     char getCh(int ndx);
 
-    // Gets the token's data as a string
+    Gets the token's data as a string
     string getData() const;
 
-    // Sets the token's score
+    Sets the token's score
     void setScore();
 
-    // Gets the token's score
+    Gets the token's score
     double getScore();
 };
 
-// Struct representing a key
+Struct representing a key
 struct key {
     int keySize;
     double distance;
 };
 
-// Converts an integer to a string
+Converts an integer to a string
 string intToString(int val);
 
-// Converts a string to an integer
+Converts a string to an integer
 int stringToInt(string in);
 
-// Converts a decimal number to binary string, bit represents # of bits desired
+Converts a decimal number to binary string, bit represents # of bits desired
 string decToBinary(int num, int bit = 8);
 
-// Converts a binary string to a decimal number
+Converts a binary string to a decimal number
 int binaryToDec(string str);
 
-// Converts an integer to a Base64 character
+Converts an integer to a Base64 character
 char intTo64(int ndx);
 
-// Converts a Base64 character to its index
+Converts a Base64 character to its index
 int base64CharToIndex(char base64Char);
 
-// Adds two strings representing numbers
+Adds two strings representing numbers
 string addStrings(const string& num1, const string& num2);
 
-// Converts a hexadecimal character to decimal
+Converts a hexadecimal character to decimal
 int hexCharToDecimal(char c);
 
-// Converts a hexadecimal string to decimal string
+Converts a hexadecimal string to decimal string
 string hexToDec(const string str);
 
-// Converts a hexadecimal string to binary string
+Converts a hexadecimal string to binary string
 string hexToBinary(string in);
 
-// Converts a hexadecimal character to binary string
+Converts a hexadecimal character to binary string
 string hexToBinary(char in);
 
-// Converts a hex string to byte string
+Converts a hex string to byte string
 string hexStringToBytes(const string& str);
 
-// Converts a byte string to a hex string
+Converts a byte string to a hex string
 string bytesToHexString(const string& str);
 
-// Encodes a string into Base64
+Encodes a string into Base64
 string encode64(string in);
 
-// Decodes a Base64 string
+Decodes a Base64 string
 string decode64(const string& str);
 
-// Converts a hex string to Base64
+Converts a hex string to Base64
 string hexTo64(string in);
 
-// Performs a fixed XOR operation on two hex strings
+Performs a fixed XOR operation on two hex strings
 string fixedXOR(const string hex1, const string hex2);
 
-// Performs XOR operation with a single-byte key on a string
+Performs XOR operation with a single-byte key on a string
 string xorSingleByte(string str, char key);
 
-// Breaks a single-byte XOR key
+Breaks a single-byte XOR key
 string xorBreakSingleKey(token* arr, int cap);
 
-// Breaks a single-byte XOR key and returns the key
+Breaks a single-byte XOR key and returns the key
 char xorBreakSingleKey(const string& str);
 
-// Performs repeating-key XOR encryption
+Performs repeating-key XOR encryption
 string xorRepeat(string str, string key);
 
-// Decrypts repeating-key XOR-encrypted string
+Decrypts repeating-key XOR-encrypted string
 string xorRepeatDecrypt(string str, string key);
 
-// Partition function for quicksort on tokens
+Partition function for quicksort on tokens
 int partition(token* arr, int low, int high);
 
-// QuickSort function to sort tokens by score
+QuickSort function to sort tokens by score
 void sortByScore(token* arr, int low, int high);
 
-// Partition function for quicksort on keys
+Partition function for quicksort on keys
 int partition(key* arr, int low, int high);
 
-// QuickSort function to sort keys by distance
+QuickSort function to sort keys by distance
 void sortByDistance(key* arr, int low, int high);
 
-// Calculates the Hamming distance between two strings
+Calculates the Hamming distance between two strings
 int hammingDistance(const std::string& str1, const std::string& str2);
 
-// Breaks repeating-key XOR encryption and returns the key
+ Breaks repeating-key XOR encryption and returns the key
 string breakRepeatingKey(const string& str);
 
-// Transposes a string array based on a given index
+Transposes a string array based on a given index
 string transpose(string* str, int ndx, int size);
 
 
