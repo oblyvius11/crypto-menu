@@ -103,97 +103,94 @@ struct key {
     double distance;
 };
 
-Converts an integer to a string
+Converts an integer to a string: 
 string intToString(int val);
 
-Converts a string to an integer
+Converts a string to an integer: 
 int stringToInt(string in);
 
 Converts a decimal number to binary string, bit represents # of bits desired
 string decToBinary(int num, int bit = 8);
 
-Converts a binary string to a decimal number
+Converts a binary string to a decimal number: 
 int binaryToDec(string str);
 
-Converts an integer to a Base64 character
+Converts an integer to a Base64 character: 
 char intTo64(int ndx);
 
-Converts a Base64 character to its index
+Converts a Base64 character to its index: 
 int base64CharToIndex(char base64Char);
 
-Adds two strings representing numbers
+Adds two strings representing numbers: 
 string addStrings(const string& num1, const string& num2);
 
-Converts a hexadecimal character to decimal
+Converts a hexadecimal character to decimal: 
 int hexCharToDecimal(char c);
 
-Converts a hexadecimal string to decimal string
+Converts a hexadecimal string to decimal string: 
 string hexToDec(const string str);
 
-Converts a hexadecimal string to binary string
-string hexToBinary(string in);
-
-Converts a hexadecimal character to binary string
+Converts a hexadecimal character to binary string: 
 string hexToBinary(char in);
 
-Converts a hex string to byte string
+Converts a hex string to byte string: 
 string hexStringToBytes(const string& str);
 
-Converts a byte string to a hex string
+Converts a byte string to a hex string: 
 string bytesToHexString(const string& str);
 
-Encodes a string into Base64
+Encodes a string into Base64: 
 string encode64(string in);
 
-Decodes a Base64 string
+Decodes a Base64 string: 
 string decode64(const string& str);
 
-Converts a hex string to Base64
+Converts a hex string to Base64: 
 string hexTo64(string in);
 
-Performs a fixed XOR operation on two hex strings
+Performs a fixed XOR operation on two hex strings: 
 string fixedXOR(const string hex1, const string hex2);
 
-Performs XOR operation with a single-byte key on a string
+Performs XOR operation with a single-byte key on a string: 
 string xorSingleByte(string str, char key);
 
-Breaks a single-byte XOR key
+Breaks a single-byte XOR key: 
 string xorBreakSingleKey(token* arr, int cap);
 
-Breaks a single-byte XOR key and returns the key
+Breaks a single-byte XOR key and returns the key: 
 char xorBreakSingleKey(const string& str);
 
-Performs repeating-key XOR encryption
+Performs repeating-key XOR encryption: 
 string xorRepeat(string str, string key);
 
-Decrypts repeating-key XOR-encrypted string
+Decrypts repeating-key XOR-encrypted string: 
 string xorRepeatDecrypt(string str, string key);
 
-Partition function for quicksort on tokens
+Partition function for quicksort on tokens: 
 int partition(token* arr, int low, int high);
 
-QuickSort function to sort tokens by score
+QuickSort function to sort tokens by score: 
 void sortByScore(token* arr, int low, int high);
 
-Partition function for quicksort on keys
+Partition function for quicksort on keys: 
 int partition(key* arr, int low, int high);
 
-QuickSort function to sort keys by distance
+QuickSort function to sort keys by distance: 
 void sortByDistance(key* arr, int low, int high);
 
-Calculates the Hamming distance between two strings
+Calculates the Hamming distance between two strings: 
 int hammingDistance(const std::string& str1, const std::string& str2);
 
- Breaks repeating-key XOR encryption and returns the key
+Breaks repeating-key XOR encryption and returns the key: 
 string breakRepeatingKey(const string& str);
 
-Transposes a string array based on a given index
+Transposes a string array based on a given index: 
 string transpose(string* str, int ndx, int size);
 
 
 
 
-How to Use
+How to Use: 
 You can use the main.cpp file to use the menu. To use the toolkit and its functions, 
 include the token.h header file in your C++ project. Instantiate the token class 
 and utilize its methods for encoding, decoding, scoring, and XOR operations.
@@ -201,7 +198,7 @@ and utilize its methods for encoding, decoding, scoring, and XOR operations.
 
 
 
-Sample Data
+Sample Data: 
 The samples used for testing were found off of the challenges on cryptopals.com. 
 This file does not include ALL sample data sets used for testing. But I have provided some.
 
@@ -271,7 +268,7 @@ AB0cRSo+AwgKRSANExlJCBQaBAsANU9TKxFJL0dMHRwRTAtPBRwQMAAATQcB
 FlRlIkw5QwA2GggaR0YBBg5ZTgIcAAw3SVIaAQcVEU8QTyEaYy0fDE4ITlhI
 Jk8DCkkcC3hFMQIEC0EbAVIqCFZBO1IdBgZUVA4QTgUWSR4QJwwRTWM=
 
-Sample 2:
+Sample 2: 
 0e3647e8592d35514a081243582536ed3de6734059001e3f535ce6271032
 334b041de124f73c18011a50e608097ac308ecee501337ec3e100854201d
 40e127f51c10031d0133590b1e490f3514e05a54143d08222c2a4071e351
