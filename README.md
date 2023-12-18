@@ -26,12 +26,12 @@ performs data analysis, and offers various encryption and decryption functionali
 
 
 
-Classes and Functions
+Classes and Functions: 
 Below is a brief overview of the functions and classes in the token.h file. If you want 
 specifics, I have tried my best to leave comments throughout the code where I thought
 it was necessary to help readability.
 
-Class representing a token
+Class representing a token: 
 class token {
 private:
     int size, capacity;
