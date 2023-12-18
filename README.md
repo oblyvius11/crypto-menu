@@ -6,7 +6,7 @@ breaking repeating-key XOR ciphers, and more.
 
 
 
-Table of Contents
+Table of Contents:
   Code Structure
   Classes and Functions
   How to Use
